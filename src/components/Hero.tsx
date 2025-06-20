@@ -100,7 +100,7 @@ const Hero = () => {
 
       {/* Secret hint message */}
       {showHint && (
-        <div className="fixed top-4 right-4 bg-purple-600 text-white p-4 rounded-lg shadow-lg z-50 animate-bounce">
+        <div className="fixed top-4 right-4 bg-purple-600 text-white p-4 rounded-lg shadow-lg z-50">
           <p className="text-sm">🎿 Psst... try visiting /secret-vault 🎿</p>
         </div>
       )}
