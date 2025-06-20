@@ -16,7 +16,7 @@ const queryClient = new QueryClient();
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <BrowserRouter basename="/grip-ski-leap-test">
         <CartProvider>
           <TooltipProvider>
             <Routes>
