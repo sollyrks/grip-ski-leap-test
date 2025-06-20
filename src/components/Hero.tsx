@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCart, Store } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
@@ -7,6 +7,18 @@ import { getImagePath } from '@/lib/utils';
 
 const Hero = () => {
   const { getItemCount } = useCart();
+  const [secretClicks, setSecretClicks] = useState(0);
+  const [showHint, setShowHint] = useState(false);
+
+  const handleSecretClick = () => {
+    const newCount = secretClicks + 1;
+    setSecretClicks(newCount);
+    
+    if (newCount === 7) {
+      setShowHint(true);
+      setTimeout(() => setShowHint(false), 5000);
+    }
+  };
 
   return (
     <section className="relative min-h-screen bg-black text-white overflow-hidden">
@@ -77,7 +89,21 @@ const Hero = () => {
         
         {/* Simplified background elements */}
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-900/30 to-transparent"></div>
+        
+        {/* Hidden easter egg trigger */}
+        <div 
+          className="absolute bottom-10 right-10 w-16 h-16 cursor-pointer opacity-0 hover:opacity-10 transition-opacity"
+          onClick={handleSecretClick}
+          title="🤔"
+        ></div>
       </div>
+
+      {/* Secret hint message */}
+      {showHint && (
+        <div className="fixed top-4 right-4 bg-purple-600 text-white p-4 rounded-lg shadow-lg z-50 animate-bounce">
+          <p className="text-sm">🎿 Psst... try visiting /secret-vault 🎿</p>
+        </div>
+      )}
     </section>
   );
 };

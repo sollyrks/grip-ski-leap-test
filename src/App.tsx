@@ -10,6 +10,7 @@ import Store from "./pages/Store";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 import Checkout from "./pages/Checkout";
+import SecretPage from "./pages/SecretPage";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => {
               <Route path="/store" element={<Store />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
+              <Route path="/secret-vault" element={<SecretPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
