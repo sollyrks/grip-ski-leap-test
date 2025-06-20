@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { getImagePath } from '@/lib/utils';
 
 const BrandStory = () => {
   return (
@@ -18,7 +19,7 @@ const BrandStory = () => {
           {/* First Image - Group Action */}
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src="/lovable-uploads/172bb8ff-4600-4788-a2f6-98fe859c061f.png"
+              src={getImagePath("/lovable-uploads/172bb8ff-4600-4788-a2f6-98fe859c061f.png")}
               alt="Skiers in action with bright blue sky"
               className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
             />
@@ -32,7 +33,7 @@ const BrandStory = () => {
           {/* Second Image - Individual Excellence */}
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src="/lovable-uploads/25dc6886-1c11-4836-bbff-b36740b80963.png"
+              src={getImagePath("/lovable-uploads/25dc6886-1c11-4836-bbff-b36740b80963.png")}
               alt="Professional skier demonstrating technique"
               className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
             />
@@ -46,7 +47,7 @@ const BrandStory = () => {
           {/* Third Image - Adventure */}
           <div className="relative group overflow-hidden rounded-lg">
             <img 
-              src="/lovable-uploads/f6572cd0-0ff8-49cd-bfee-7ccae50ade8b.png"
+              src={getImagePath("/lovable-uploads/f6572cd0-0ff8-49cd-bfee-7ccae50ade8b.png")}
               alt="Skier on mountain peak with stunning landscape"
               className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
             />

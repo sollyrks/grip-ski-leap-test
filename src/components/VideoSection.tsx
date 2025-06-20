@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { getImagePath } from '@/lib/utils';
 
 const VideoSection = () => {
   return (
@@ -28,7 +29,7 @@ const VideoSection = () => {
         <div className="flex items-center justify-center space-x-12">
           <div className="flex items-center space-x-4">
             <Avatar className="h-16 w-16">
-              <AvatarImage src="/lovable-uploads/133cc71f-d288-4f74-83f0-98060eaf8dd5.png" alt="Candide Thovex" />
+                              <AvatarImage src={getImagePath("/lovable-uploads/133cc71f-d288-4f74-83f0-98060eaf8dd5.png")} alt="Candide Thovex" />
               <AvatarFallback>CT</AvatarFallback>
             </Avatar>
             <div>
@@ -44,7 +45,7 @@ const VideoSection = () => {
             className="flex items-center space-x-4 hover:opacity-80 transition-opacity cursor-pointer"
           >
             <Avatar className="h-16 w-16">
-              <AvatarImage src="/lovable-uploads/5dd7da5f-f872-413d-a9bb-e315d8edac9c.png" alt="Steep Steep" />
+                              <AvatarImage src={getImagePath("/lovable-uploads/5dd7da5f-f872-413d-a9bb-e315d8edac9c.png")} alt="Steep Steep" />
               <AvatarFallback>SS</AvatarFallback>
             </Avatar>
             <div>

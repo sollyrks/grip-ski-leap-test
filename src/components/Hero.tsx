@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCart, Store } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
+import { getImagePath } from '@/lib/utils';
 
 const Hero = () => {
   const { getItemCount } = useCart();
@@ -42,7 +43,7 @@ const Hero = () => {
         {/* Combined Image and Text */}
         <div className="relative z-30 mb-8 flex flex-col items-center">
           <img 
-            src="/lovable-uploads/def9f015-8524-4d03-b175-67051a745630.png" 
+            src={getImagePath("/lovable-uploads/def9f015-8524-4d03-b175-67051a745630.png")} 
             alt="Faction Skier"
             className="w-[500px] md:w-[600px] lg:w-[750px] h-auto object-contain mx-auto"
             style={{

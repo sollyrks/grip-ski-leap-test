@@ -7,6 +7,7 @@ import { ShoppingCart, ArrowLeft, X, Zap, Star } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useCart } from '@/contexts/CartContext';
 import SkiFunnel from '@/components/SkiFunnel';
+import { getImagePath } from '@/lib/utils';
 
 interface Ski {
   id: number;
@@ -30,7 +31,7 @@ const Store = () => {
       id: 1,
       name: "VELOCITY",
       price: 699.99,
-      image: "/lovable-uploads/5ff6366d-1ec8-4a5b-96d2-8441995635e0.png",
+      image: getImagePath("/lovable-uploads/5ff6366d-1ec8-4a5b-96d2-8441995635e0.png"),
       description: "High-speed performance skis with vibrant gradient design",
       sizes: ["160cm", "170cm", "180cm"],
       category: "Racing"
@@ -39,7 +40,7 @@ const Store = () => {
       id: 2,
       name: "APEX",
       price: 449.99,
-      image: "/lovable-uploads/d095e97e-60a4-402c-b445-2409169c05fa.png",
+      image: getImagePath("/lovable-uploads/d095e97e-60a4-402c-b445-2409169c05fa.png"),
       description: "Peak performance skis for all-mountain adventures",
       sizes: ["155cm", "165cm", "175cm"],
       category: "All-Mountain"
@@ -48,7 +49,7 @@ const Store = () => {
       id: 3,
       name: "TITAN",
       price: 599.99,
-      image: "/lovable-uploads/1e5c171b-e92a-461b-b5c1-3f952eb22d34.png",
+      image: getImagePath("/lovable-uploads/1e5c171b-e92a-461b-b5c1-3f952eb22d34.png"),
       description: "Powerful blue skis for advanced skiers",
       sizes: ["160cm", "170cm", "180cm", "190cm"],
       category: "Advanced"
@@ -57,7 +58,7 @@ const Store = () => {
       id: 4,
       name: "NOVA",
       price: 799.99,
-      image: "/lovable-uploads/1591d9da-6e35-4e9a-8a14-4c7ee39270fc.png",
+      image: getImagePath("/lovable-uploads/1591d9da-6e35-4e9a-8a14-4c7ee39270fc.png"),
       description: "Stellar performance with modern pink design",
       sizes: ["170cm", "180cm", "190cm"],
       category: "Freestyle"
@@ -66,7 +67,7 @@ const Store = () => {
       id: 7,
       name: "PRECISION",
       price: 649.99,
-      image: "/lovable-uploads/3bb0be02-7191-42ae-9a59-1cb36f96f237.png",
+      image: getImagePath("/lovable-uploads/3bb0be02-7191-42ae-9a59-1cb36f96f237.png"),
       description: "Premium precision skis with stunning red-orange gradient",
       sizes: ["160cm", "170cm", "180cm"],
       category: "Racing"
@@ -75,7 +76,7 @@ const Store = () => {
       id: 8,
       name: "FACTION",
       price: 579.99,
-      image: "/lovable-uploads/194e90ab-0df3-4f59-889c-83c2718ed81d.png",
+      image: getImagePath("/lovable-uploads/194e90ab-0df3-4f59-889c-83c2718ed81d.png"),
       description: "Professional faction skis with vibrant green design",
       sizes: ["165cm", "175cm", "185cm"],
       category: "All-Mountain"
